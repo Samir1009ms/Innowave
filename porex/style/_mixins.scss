@@ -1,0 +1,106 @@
+ @import "variables";
+
+ @mixin flex-center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ @mixin flex-between {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ @mixin flex-column {
+     display: flex;
+     flex-direction: column;
+ }
+
+ @mixin flex-column-center {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ @mixin flex-column-center-start {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ @mixin flex-row {
+     display: flex;
+     flex-direction: row;
+ }
+
+ @mixin flex-row-center {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ }
+
+ @mixin flex-row-start {
+     display: flex;
+     align-items: flex-start;
+     justify-content: flex-start;
+ }
+
+ @mixin flex-row-between {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+
+ @mixin flex-row-end {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     align-items: flex-start;
+ }
+
+ @mixin flex-row-center-start {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+ }
+
+ @mixin flex-row-center-end {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+ }
+
+
+
+
+ @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+     transition: $property $duration $timing;
+ }
+
+ @mixin laptop {
+     @media (min-width:#{$medium}) and (max-width: #{$xlarge}) {
+         @content;
+     }
+
+ }
+
+
+ @mixin tablet {
+     @media (min-width:#{$small}) and (max-width: #{$medium}) {
+         @content;
+     }
+
+ }
+
+ @mixin mobile {
+     @media(max-width: #{$small}) {
+         @content;
+     }
+
+ }

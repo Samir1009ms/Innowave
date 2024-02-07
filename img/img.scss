@@ -1,0 +1,73 @@
+* {
+    // taglarda default deyerleri sifirlamaq ucundur 
+    // border-box ise elemntlerde width ile padding beraberlesdirmesidir
+    // element 500 pxdir se 20 px padding elave olsun olcusunu artmaga qoymur
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5cbe3;
+
+    .container {
+        width: 50%;
+        height: 80%;
+        background-color: #fff;
+        // text fontunu deyismek ucundur
+        font-family: "News Cycle", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+
+
+        // & yazilir onnan qabaq ki elementin adini goturub birlesidirir 
+        // bem adlanir tekrarciligin qarsini alir
+        &_title {
+            font-family: "Alex Brush", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 150px;
+            text-align: center;
+            // text-wrap: balance;
+            font-variant-caps: normal;
+            // word-wrap: break-word;
+            // white-space: pre-line;
+            line-height: 1;
+            margin-top: 15px;
+        }
+
+        &_name {
+            font-family: "News Cycle", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        &_small_text {
+            font-size: 20px;
+        }
+
+        &_date {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+
+        &_location {
+            display: block;
+            margin-top: 10px;
+            font-size: 25px;
+        }
+
+        &_end_text {
+            font-size: 25px;
+            font-family: "Courgette", cursive;
+        }
+    }
+}
